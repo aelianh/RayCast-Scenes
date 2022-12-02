@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public LayerMask rayLayer;
-    public LayerMask firstSceneLayer;
-    public LayerMask secondSceneLayer;
-    public LayerMask thirdSceneLayer;
-
-
+    [SerializeField]private LayerMask rayLayer;
+    [SerializeField]private LayerMask firstSceneLayer;
+    [SerializeField]private LayerMask secondSceneLayer;
+    [SerializeField]private LayerMask thirdSceneLayer;
 
     void Start()
     {
