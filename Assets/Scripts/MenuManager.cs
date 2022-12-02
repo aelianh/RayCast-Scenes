@@ -10,6 +10,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField]private LayerMask secondSceneLayer;
     [SerializeField]private LayerMask thirdSceneLayer;
 
+    [SerializeField]private bool cronometro = false;
+
+
     void Start()
     {
 
@@ -37,20 +40,22 @@ public class MenuManager : MonoBehaviour
             
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit2;
-            Debug.Log("hit");
             if(Physics.Raycast(ray,out hit2))
             {
                 transform.position = new Vector3(hit2.point.x, transform.position.y, hit2.point.z);
                 if(hit2.transform.gameObject.layer == 6)
                 {
+                    cronometro = true;
                     LoadScene(1);
                 }
                 else if(hit2.transform.gameObject.layer == 7)
                 {
+                    cronometro = true;
                     LoadScene(2);
                 }
                 else if(hit2.transform.gameObject.layer == 8)
                 {
+                    cronometro = true;
                   LoadScene(3);
                 }
     
